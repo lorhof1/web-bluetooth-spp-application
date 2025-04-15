@@ -51,7 +51,7 @@ const BluetoothProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
     try {
       const device = await navigator.bluetooth.requestDevice({
-        acceptAllDevices: false,
+        acceptAllDevices: true,
         filters: [{ services: services as BluetoothServiceUUID[] }],
       });
 
